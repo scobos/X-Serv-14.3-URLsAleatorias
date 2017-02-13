@@ -13,7 +13,7 @@ while True:
     print (recvSocket.recv(1024))
     url = str(random.randint(1, 1000000000000))
     recvSocket.send(bytes("HTTP/1.1 200 OK\r\n\r\n" +
-                    "<html><body><h1>Hola. <a href='"+ url +
+                    "<html><body><p>Hola. <a href='"+ url +
                     " ' >Dame otra</a></p></body></html>" +
                     "\r\n", 'utf-8'))
     recvSocket.close()
